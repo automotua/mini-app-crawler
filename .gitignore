@@ -1,0 +1,14 @@
+# virtualenv
+venv/
+
+# node modules in tests directory
+tests/node_modules/
+
+# ropeproject
+.ropeproject
+
+# .DS_Store
+.DS_Store
+
+# ctags files
+tags
