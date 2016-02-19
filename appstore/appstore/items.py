@@ -15,3 +15,4 @@ class AppstoreItem(scrapy.Item):
     url = scrapy.Field()
     appid = scrapy.Field()
     intro = scrapy.Field()
+    recommended = scrapy.Field()
