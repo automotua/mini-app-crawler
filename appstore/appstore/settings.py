@@ -49,9 +49,16 @@ DOWNLOAD_DELAY=2
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'appstore.middlewares.MyCustomDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.extensions.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+    'appstore.random_useragent.RandomUserAgentMiddleware': 400,
+    # 'appstore.random_proxy.RandomProxyMiddleware': 100,
+    'scrapyjs.SplashMiddleware': 725,
+}
+
+SPLASH_URL = 'http://192.168.99.100:8050/'
+DUPEFILTER_CLASS = 'scrapyjs.SplashAwareDupeFilter'
+HTTPCACHE_STORAGE = 'scrapyjs.SplashAwareFSCacheStorage'
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html

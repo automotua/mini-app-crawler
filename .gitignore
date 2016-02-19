@@ -86,3 +86,17 @@ target/
 
 # pyenv
 .python-version
+
+#### vim ####
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+
+
+##### Project Specific #####
+appstore.dat
